@@ -1,0 +1,6 @@
+main: com.github.AndrewAlbizati.Plugin
+name: DiscordIntegrationPlugin
+version: 1.0.0
+description: This plugin is used to connect Discord servers with Minecraft servers, and creates a bidirectional chat system with the two.
+author: Andrew Albizati
+api-version: 1.16
