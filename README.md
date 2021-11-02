@@ -1,5 +1,5 @@
 # Discord Integration Plugin
-This plugin integrates Discord serves with Minecraft servers, and creates a bidirectional chat system between the two.
+This plugin integrates Discord servers with Minecraft servers, and creates a bidirectional chat system between the two.
 
 ## How to Use
 1. Add `discord-integration-plugin.jar` to the server's plugins folder.
