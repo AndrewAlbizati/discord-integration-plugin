@@ -1,6 +1,5 @@
 package com.github.AndrewAlbizati;
 
-import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
@@ -24,9 +23,8 @@ public class MinecraftMessageListener implements Listener {
         String username = event.getPlayer().getName();
 
         EmbedBuilder eb = new EmbedBuilder();
-        eb.setTitle("Message in " + Bukkit.getServer().getName());
+        eb.setTitle(bot.getMinecraftServerName());
         eb.setColor(minecraftEmbedColor);
-        //eb.setThumbnail(Bukkit.getServerIcon());
         eb.setDescription("**<" + username + ">** " + event.getMessage());
 
         bot.getMessageChannel().sendMessage(eb);
@@ -37,9 +35,8 @@ public class MinecraftMessageListener implements Listener {
         String username = event.getPlayer().getName();
 
         EmbedBuilder eb = new EmbedBuilder();
-        eb.setTitle("Message in " + Bukkit.getServer().getName());
+        eb.setTitle(bot.getMinecraftServerName());
         eb.setColor(minecraftEmbedColor);
-        //eb.setThumbnail(Bukkit.getServerIcon());
         eb.setDescription( "**" + username + "** joined the game");
 
         bot.getMessageChannel().sendMessage(eb);
@@ -50,9 +47,8 @@ public class MinecraftMessageListener implements Listener {
         String username = event.getPlayer().getName();
 
         EmbedBuilder eb = new EmbedBuilder();
-        eb.setTitle("Message in " + Bukkit.getServer().getName());
+        eb.setTitle(bot.getMinecraftServerName());
         eb.setColor(minecraftEmbedColor);
-        //eb.setThumbnail(Bukkit.getServerIcon());
         eb.setDescription("**" + username + "** left the game");
 
         bot.getMessageChannel().sendMessage(eb);
@@ -60,13 +56,13 @@ public class MinecraftMessageListener implements Listener {
 
     @EventHandler
     public void PlayerDeathMessage(PlayerDeathEvent event) {
-        String deathMessage = event.getDeathMessage();
+        String username = event.getDeathMessage().split(" ")[0];
+        String deathMessage = event.getDeathMessage().substring(username.length() + 1);
 
         EmbedBuilder eb = new EmbedBuilder();
-        eb.setTitle("Message in " + Bukkit.getServer().getName());
+        eb.setTitle(bot.getMinecraftServerName());
         eb.setColor(minecraftEmbedColor);
-        //eb.setThumbnail(Bukkit.getServerIcon());
-        eb.setDescription(deathMessage);
+        eb.setDescription("**" + username + "** " + deathMessage);
 
         bot.getMessageChannel().sendMessage(eb);
     }

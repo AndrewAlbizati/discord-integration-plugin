@@ -15,7 +15,14 @@ public class Bot {
         return messageChannel;
     }
 
-    public Bot (final String token, final long messageChannelId) {
+    private final String minecraftServerName;
+    public String getMinecraftServerName() {
+        return minecraftServerName;
+    }
+
+    public Bot (final String token, final long messageChannelId, final String minecraftServerName) {
+        this.minecraftServerName = minecraftServerName;
+
         api = new DiscordApiBuilder().setToken(token).login().join();
         System.out.println("Logged in as " + api.getYourself().getDiscriminatedName());
 
