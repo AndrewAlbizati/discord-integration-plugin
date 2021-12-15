@@ -6,7 +6,7 @@ This plugin integrates Discord servers with Minecraft servers, and creates a bid
 2. Create a file titled `discord-integration-config.properties` in the same folder as the server's JAR file.
 3. Add the following to the file:
 ```
-#Discord Integration Plugin Properties
+# Discord Integration Plugin Properties
 token={INSERT DISCORD BOT TOKEN HERE}
 channel-id={INSERT MINECRAFT DISCORD CHANNEL ID HERE}
 minecraft-server-name={INSERT PREFERRED MINECRAFT SERVER NAME HERE}
