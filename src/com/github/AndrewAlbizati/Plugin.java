@@ -6,7 +6,6 @@ import org.bukkit.scheduler.BukkitRunnable;
 import org.javacord.api.entity.activity.ActivityType;
 import org.javacord.api.entity.message.embed.EmbedBuilder;
 
-import java.awt.*;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
@@ -49,7 +48,7 @@ public class Plugin extends JavaPlugin {
             // Server start message
             EmbedBuilder eb = new EmbedBuilder();
             eb.setTitle(bot.getMinecraftServerName());
-            eb.setColor(new Color(71, 122, 30));
+            eb.setColor(bot.minecraftEmbedColor);
             eb.setDescription("Server has started");
 
             bot.getMessageChannel().sendMessage(eb);
@@ -65,7 +64,7 @@ public class Plugin extends JavaPlugin {
         try {
             EmbedBuilder eb = new EmbedBuilder();
             eb.setTitle(bot.getMinecraftServerName());
-            eb.setColor(new Color(71, 122, 30));
+            eb.setColor(bot.minecraftEmbedColor);
             eb.setDescription("Server has stopped");
 
             bot.getMessageChannel().sendMessage(eb).join();

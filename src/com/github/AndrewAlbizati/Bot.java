@@ -4,8 +4,11 @@ import org.javacord.api.DiscordApi;
 import org.javacord.api.DiscordApiBuilder;
 import org.javacord.api.entity.channel.ServerTextChannel;
 
+import java.awt.*;
+
 public class Bot {
     private final DiscordApi api;
+    public final Color minecraftEmbedColor = new Color(71, 122, 30);
     public DiscordApi getApi() {
         return api;
     }
