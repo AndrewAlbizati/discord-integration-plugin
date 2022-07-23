@@ -2,9 +2,18 @@
 This plugin integrates Discord servers with Minecraft servers, and creates a bidirectional chat system between the two.
 
 ## How to Use
-1. Add `discord-integration-plugin.jar` to the server's plugins folder.
-2. Create a file titled `discord-integration-config.properties` in the same folder as the server's JAR file.
-3. Add the following to the file:
+1. Run the following commands in a command prompt or terminal
+    1. If on Windows:
+        1. `gradlew clean`
+        2. `gradlew build`
+
+    2. If on macOS/Linux
+        1. `chmod +x gradlew`
+        2. `./gradlew clean`
+        3. `./gradlew build`
+2. The JAR file for the plugin will be located in `build\libs\`. Move the JAR file into the plugins folder.
+3. Create a file titled `discord-integration-config.properties` in the same folder as the server's JAR file.
+4. Add the following to the file:
 ```
 # Discord Integration Plugin Properties
 token={INSERT DISCORD BOT TOKEN HERE}
@@ -15,4 +24,4 @@ minecraft-server-name={INSERT PREFERRED MINECRAFT SERVER NAME HERE}
 
 ## Dependencies
 - Spigot (https://www.spigotmc.org/)
-- Javacord 3.3.2 (https://github.com/Javacord/Javacord)
+- Javacord 3.5.0 (https://github.com/Javacord/Javacord)

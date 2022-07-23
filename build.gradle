@@ -25,7 +25,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.javacord:javacord:3.4.0'
+    implementation 'org.javacord:javacord:3.5.0'
     compileOnly 'org.spigotmc:spigot-api:1.19-R0.1-SNAPSHOT'
 }
 
